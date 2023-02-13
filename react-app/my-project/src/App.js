@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// rafce  - React Arrow Funtion Export Component
 
-function App() {
+import React, {useEffect, useState} from 'react'
+import Child from './Child';
+
+const App = () => {
+
+  const [name, setName]= useState("React");
+  const [show, setShow]= useState(true);
+
+  useEffect(()=>{
+    console.log("useEffect", "ComponentDidMount");
+  }, [name]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>App{" "}
+      {name} {" "}
+      <button onClick={()=>setName("JS")}>Update Name</button> {" "}
+      <button onClick={()=>setShow(!show)}>Update Show</button>
+      {show ? <Child /> : null}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

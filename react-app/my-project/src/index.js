@@ -82,65 +82,173 @@ import ReactDOM from 'react-dom/client';
 //     <Main />
 // );
 
-import Header from './HeaderClass/Header';
+// import Header from './HeaderClass/Header';
 
-class Third extends Component {
-  render () {
-    return <div> third Class Component</div>
-  }
-}
+// class Third extends Component {
+//   render () {
+//     return <div> third Class Component</div>
+//   }
+// }
 
-class Secound extends Component {
-  render () {
-    return <div>Secound Class Component</div>
-  }
-}
+// class Secound extends Component {
+//   render () {
+//     return <div>Secound Class Component</div>
+//   }
+// }
 
 
-class Frist extends Component {
-  render () {
-    console.log("this",this); 
-    return(
-     <div>
-      {" "}
-      First Class Component {this. props.data } {""}
-      <button onClick={()=> this.props.get ("Data")}>Click</button>
-      </div>
-    )
-  }
-}
+// class Frist extends Component {
+//   render () {
+//     console.log("this",this); 
+//     return(
+//      <div>
+//       {" "}
+//       First Class Component {this. props.data } {""}
+//       <button onClick={()=> this.props.get ("Data")}>Click</button>
+//       </div>
+//     )
+//   }
+// }
 
-class Main extends Component {
-  constructor() {
-    super();
-    this.state= {
-      name:"kaliraj",
-      age:26,
-      feature:"state"
-    };
-    console.log(this);
-  }
-  getData() {
-    console.log("data");
-  }
-  updateName() {
-    this.setState({name:"React State"});
-  }
-  render () {
-    return (
-      <div>
-        {this.state.name}
-        {this.state.age}
-        <button onClick={() => this.updateName()}>Update Name</button>
-        <button onClick={this.updateName.bind(this)}>Update Name</button>
-        Class Component
-        <Frist data="React Class"  get={this.getData}/>
-        <Secound />
-        <Third />
-        <Header />
-      </div>
-    )
-  }
-}
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Main />);
+// class Main extends Component {
+//   constructor() {
+//     super();
+//     this.state= {
+//       name:"kaliraj",
+//       age:26,
+//       feature:"state"
+//     };
+//     console.log(this);
+//   }
+//   getData() {
+//     console.log("data");
+//   }
+//   updateName() {
+//     this.setState({name:"React State"});
+//   }
+//   render () {
+//     return (
+//       <div>
+//         {this.state.name}
+//         {this.state.age}
+//         <button onClick={() => this.updateName()}>Update Name</button>
+//         <button onClick={this.updateName.bind(this)}>Update Name</button>
+//         Class Component
+//         <Frist data="React Class"  get={this.getData}/>
+//         <Secound />
+//         <Third />
+//         <Header />
+//       </div>
+//     )
+//   }
+// }
+
+// import React, { useState, useEffect } from 'react';
+
+// function MyComponent() {
+//   const [time, setTime] = useState(new Date());
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setTime(new Date());
+//     }, 1000);
+
+//   });
+
+//   return <div>
+//             <p>The current time is:</p>
+//             <p> {time.toLocaleTimeString()}</p>
+//           </div>;
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<MyComponent />);
+
+// class First extends Component{
+//   render(){
+//     console.log('this',this);
+//     return <div>First Class component {this.props.name} {""}
+//     <button onClick={() => this.props.get("data")}>Click</button>
+//     </div>
+//   }
+// }
+
+// class Second extends Component{
+//   render(){
+//     return <div>Second Class component</div>
+//   }
+// }
+
+// class Main extends Component{
+
+//   constructor(){
+//     super();
+//     this.state = {
+//       fName:'kali',
+//       lName:'raj'
+//     }
+//     console.log(this);
+//   }
+
+//   getData(param){
+//     console.log('get data',param);
+//   }
+
+//   updateName(){
+//     this.setState({fName:"kaliraj", lName:"subbaiyakani"})
+//   }
+
+//   render(){
+//     console.log(this);
+//     return <div>
+//       {this.state.fName} {""} {this.state.lName} {""}
+//       <button onClick={() => this.updateName()}>update name</button>
+//       <button onClick={this.updateName.bind(this)}>update name</button>
+//       Class component
+//       <First name='react' get={this.getData}/>
+//       <Second />
+//     </div>
+//   }
+// }
+
+// const root =ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Main />)
+
+// import Header from './HeaderClass/Header';
+
+// const root =ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Header />)
+
+// Actual DOM example program in React
+
+// Virtual DOM example program in React
+
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {count: 0};
+//   }
+//   handleClick() {
+//     this.setState({
+//       count: this.state.count + 1
+//     });
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>Add Quantity</h1>
+//         {/* <input type="text" value={this.state.count}></input> */}
+//         <h1>{this.state.count}</h1>
+//         <button onClick={this.handleClick.bind(this)}>ADD</button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+import App from './App';
+
+
+const root =ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />)
