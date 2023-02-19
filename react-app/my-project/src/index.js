@@ -247,8 +247,10 @@ import ReactDOM from 'react-dom/client';
 
 // export default App;
 
-import App from './App';
+// import App from './App';
+
+import Routing from './Routing';
 
 
 const root =ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />)
+root.render(<Routing />)

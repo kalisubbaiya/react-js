@@ -1,0 +1,7 @@
+$blue: blue;
+
+@mixin textStyle{
+    font-size: 44px;
+    border: 1px solid $blue;
+    font-family: 'Times New Roman', Times, serif;
+}

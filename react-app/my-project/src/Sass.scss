@@ -1,0 +1,16 @@
+@import "./Variable.scss";
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    .heading{           // nested css ---> First preference
+        color: greenyellow;
+    }
+}
+
+h1{
+    color: rgba($blue, 0.5);
+    @include textStyle;
+}
